@@ -16,7 +16,6 @@ export const Form = styled.View`
 export const Input = styled.TextInput`
     flex: 1;
     height: 40;
-    background: #
 `;
 
 export const SubmitButton = styled(RectButton)`
