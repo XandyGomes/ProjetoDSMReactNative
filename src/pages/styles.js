@@ -13,10 +13,23 @@ export const Form = styled.View`
     border-color: #eee;
 `;
 
-export const Input = styled.TextInput`
+export const Input = styled.TextInput.attrs({
+    placeholderTextColor:'#999'
+})`
     flex: 1;
-    height: 40;
+    height: 40px;
+    background: #eee;
+    border-radius: 4px;
+    padding: 0 15px;
+    border: 1px solid #eee;
 `;
 
 export const SubmitButton = styled(RectButton)`
+    justify-content: center;
+    align-items: center;
+    background: #3498db;
+    border-radius: 4px;
+    margin-left: 10px;
+    padding: 0 12px;
 `;
+
