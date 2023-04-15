@@ -57,8 +57,29 @@ export const Name = styled.Text`
     text-align: center;
 `;
 
-export const Bio = styled.Text``;
+export const Bio = styled.Text.attrs({
+    numberOfLines: 2,
+})`
+    font-size: 13px;
+    line-height: 18px;
+    color: #999;
+    margin-top: 5px;
+    text-align: center;
+`;
 
-export const ProfileButton = styled(RectButton)``;
+export const ProfileButton = styled(RectButton)`
+    margin-top: 10px;
+    align-self: stretch;
+    border-radius: 5px;
+    background: #3498db;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+`;
 
-export const ProfileButtonText = styled.Text``;
+export const ProfileButtonText = styled.Text`
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+`;
