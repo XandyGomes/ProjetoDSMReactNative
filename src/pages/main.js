@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { Keyboard } from 'react-native';
+
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import api from '../services/api';
@@ -31,7 +33,9 @@ export default class Main extends Component {
       newUser:'',
     });
 
-    console.log(data)
+    Keyboard.dismiss();
+
+    console.log(response.data)
   };
 
   render() {
