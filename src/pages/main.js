@@ -84,9 +84,21 @@ export default class Main extends Component {
               <Name>{item.name}</Name>
               <Bio>{item.bio}</Bio>
 
-              <ProfileButton onPress={() => { }}>
+              <ProfileButton onPress={() => {
+                this.props.navigation.navigate('user', { user: item });
+              }}>
                 <ProfileButtonText>Ver Perfil</ProfileButtonText>
               </ProfileButton>
+
+              <ProfileButton onPress={() => { 
+                this.setState({ users: users.filter(user => user.login !== item.login) })
+              }}
+                style={{backgroundColor: '#FFC0CB'}}
+              >
+                <ProfileButtonText>Excluir</ProfileButtonText>
+              </ProfileButton>
+
+
             </User>
           )}
         />

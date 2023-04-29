@@ -3,6 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Main from './pages/main';
 import Login from './pages/login';
+import User from './pages/user';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Stack = createStackNavigator();
 
@@ -25,6 +27,18 @@ export default function Routes() {
           title: 'Github VIEWER',
           headerLeft: null,
           headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#3498db',
+          },
+          headerTitleStyle: {
+            color: '#fff',
+            fontWeight: 'bold',
+          }
+        }}/>
+        <Stack.Screen name='user' component={User} options={{
+          title: 'Perfil do Usuário',
+          headerTitleAlign: 'center',
+          headerTintColor: '#fff',
           headerStyle: {
             backgroundColor: '#3498db',
           },
