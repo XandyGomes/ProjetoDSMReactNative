@@ -84,3 +84,25 @@ export const ProfileButtonText = styled.Text`
     color: #fff;
     text-transform: uppercase;
 `;
+
+export const Stars = styled.FlatList.attrs({
+    showsVerticalScrollIndicator: false,
+})`
+    margin-top: 20px;
+`;
+
+export const Starred = styled.View`
+    background: #f5f5f5
+    border-radius: 4px
+    padding: 10px 15px
+    margin-bottom: 20px
+    flex-direction: row
+    align-items: center
+`;
+
+export const OwnerAvatar = styled.Image`
+    width: 42px;
+    height: 42px;
+    border-radius: 21px;
+    background: #eee;
+`;
