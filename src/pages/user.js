@@ -9,7 +9,7 @@ export default class User extends Component {
 
     async componentDidMount() {
         const { route } = this.props;
-        const user = route.params;
+        const { user }  = route.params;
         const response = await api.get(`/users/${user.login}/starred`);
 
         this.setState({ stars: response.data });
@@ -30,7 +30,7 @@ export default class User extends Component {
 
                 <Stars
                     data={stars}
-                    KeyExtractor={(star) => String(star.id)}
+                    keyExtractor={(star) => String(star.id)}
                     renderItem={({ item }) => (
                         <Starred>
                             <OwnerAvatar source={{ uri: item.owner.avatar_url }} />

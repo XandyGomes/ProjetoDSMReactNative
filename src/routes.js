@@ -4,7 +4,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Main from './pages/main';
 import Login from './pages/login';
 import User from './pages/user';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Stack = createStackNavigator();
 
